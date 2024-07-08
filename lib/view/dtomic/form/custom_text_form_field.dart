@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/constants/app_colos.dart';
 
@@ -31,7 +30,7 @@ class CustomTextFormField extends StatelessWidget {
     this.readOnly = false,
     this.initialValue,
     this.labelText,
-    this.contentPadding ,
+    this.contentPadding,
   });
   final TextInputType? keyboardType;
   final TextEditingController? controller;

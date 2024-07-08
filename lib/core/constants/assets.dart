@@ -16,12 +16,13 @@ String selectSeatScreen = 'assets/select_seat_screen';
 String checkkoutFlightScreen = 'assets/checkkout_flight_Screen';
 String addPassengersScreen = 'assets/add_passengers_screen';
 
-class ImageAddPassengers{
+class ImageAddPassengers {
   static String adult = '$addPassengersScreen/adult.png';
   static String child = '$addPassengersScreen/child.png';
 
   static String infant = '$addPassengersScreen/infant.png';
 }
+
 class ImageCheckkoutFlight {
   static String contactDetails = '$checkkoutFlightScreen/contact_details.png';
 
@@ -96,7 +97,7 @@ class ImageReviewHotel {
 }
 
 class ImageHotelPicture {
-  static String roomIcon = '$hotelPictureScreen/room_icon.jpg';
+  static String roomIcon = '$hotelPictureScreen/hotel_picture.png';
   static String hourFrontDeskIcon =
       '$hotelPictureScreen/24_hour_front_desk_icon.png';
   static String currencyExchangeIcon =
@@ -108,17 +109,17 @@ class ImageHotelPicture {
 }
 
 class ImagefacilitiesHotel {
-  static String wifi = '$facilitiesHotelScreen/wifi.jpg';
+  static String wifi = '$facilitiesHotelScreen/wifi.png';
   static String baggage = '$facilitiesHotelScreen/baggage.png';
   static String power = '$facilitiesHotelScreen/power.png';
-  static String swimmingPool = '$facilitiesHotelScreen/swimming_pool.jpg';
-  static String restaurant = '$facilitiesHotelScreen/restaurant.jpg';
-  static String parkingArea = '$facilitiesHotelScreen/parking_area.jpg';
-  static String digitalTV = '$facilitiesHotelScreen/digital_tv.jpg';
+  static String swimmingPool = '$facilitiesHotelScreen/swimming_pool.png';
+  static String restaurant = '$facilitiesHotelScreen/restaurant.png';
+  static String parkingArea = '$facilitiesHotelScreen/parking_area.png';
+  static String digitalTV = '$facilitiesHotelScreen/digital_tv.png';
   static String currencyExchange =
-      '$facilitiesHotelScreen/currency_exchange.jpg';
-  static String carRental = '$facilitiesHotelScreen/car_rental.jpg';
-  static String hourFrontDesk = '$facilitiesHotelScreen/24_hour_front_desk.jpg';
+      '$facilitiesHotelScreen/currency_exchange.png';
+  static String carRental = '$facilitiesHotelScreen/car_rental.png';
+  static String hourFrontDesk = '$facilitiesHotelScreen/24_hour_front_desk.png';
 }
 
 class ImageResultHotel {
@@ -137,10 +138,10 @@ class ImageGuestAndRoom {
 }
 
 class ImageHome {
-  static String james = '$homeScreen/james.jpg';
-  static String all = '$homeScreen/all.jpg';
-  static String flighrs = '$homeScreen/flighrs.jpg';
-  static String hotels = '$homeScreen/hotels.jpg';
+  static String flighrs = '$homeScreen/flights.png';
+  static String james = '$homeScreen/james.png';
+  static String all = '$homeScreen/all.png';
+  static String hotels = '$homeScreen/hotels.png';
   static String dubai = '$homeScreen/dubai.png';
   static String turkey = '$homeScreen/turkey.png';
   static String korea = '$homeScreen/korea.png';
