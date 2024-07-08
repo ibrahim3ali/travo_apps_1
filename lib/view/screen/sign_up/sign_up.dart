@@ -43,14 +43,10 @@ class _SignUpState extends State<SignUp> {
               onTapIcon: () {
                 context.pop();
               },
-              textLeft: 120.w,
               fontSizeSubTitle: 14.sp,
               fontSizeTitle: 30.sp,
-              textRight: 120.w,
               distance: 15.h,
               title: 'Sign Up',
-              textBottom: 13.h,
-              textTop: 101.h,
               subTitle: 'Let’s create your account!',
             ),
             Form(

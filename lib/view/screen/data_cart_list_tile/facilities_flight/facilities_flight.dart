@@ -51,10 +51,6 @@ class _FacilitiesFlightState extends State<FacilitiesFlight> {
               onTapIcon: () {
                 context.pop();
               },
-              textBottom: 0,
-              textLeft: 122.w,
-              textRight: 123.w,
-              textTop: 60.h,
               title: 'Facilities',
             ),
             Padding(

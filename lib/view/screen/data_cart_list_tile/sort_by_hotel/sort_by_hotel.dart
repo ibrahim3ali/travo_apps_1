@@ -52,10 +52,6 @@ class _SortByHotelState extends State<SortByHotel> {
               onTapIcon: () {
                 context.pop();
               },
-              textBottom: 0,
-              textLeft: 135,
-              textRight: 135,
-              textTop: 60,
               title: 'Sort by',
             ),
             Padding(

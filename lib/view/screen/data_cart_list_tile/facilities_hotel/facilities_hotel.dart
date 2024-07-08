@@ -71,10 +71,6 @@ class _FacilitiesHotelState extends State<FacilitiesHotel> {
               onTapIcon: () {
                 context.pop();
               },
-              textBottom: 0,
-              textLeft: 122,
-              textRight: 123,
-              textTop: 60,
               title: 'Facilities',
             ),
             Padding(

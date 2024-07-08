@@ -58,7 +58,7 @@ class _SelectSeatState extends State<SelectSeat> {
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.sizeOf(context).height;
+    // final height = MediaQuery.sizeOf(context).height;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -69,9 +69,6 @@ class _SelectSeatState extends State<SelectSeat> {
               },
               isTitle: true,
               title: 'Select Seat',
-              textRight: 108.w,
-              textLeft: 107.w,
-              textTop: 60.h,
             ),
             Column(
               children: [

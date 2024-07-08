@@ -216,7 +216,7 @@ class _CheckkoutHotel1WidgetState extends State<CheckkoutHotel1Widget> {
             itemBuilder: (context, index) {
               return Container(
                 width: 411.w,
-                height: 125.h,
+                // height: 125.h,
                 padding: REdgeInsets.symmetric(
                   horizontal: 20,
                   vertical: 19,

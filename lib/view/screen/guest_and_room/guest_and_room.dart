@@ -5,7 +5,6 @@ import 'package:travo_apps_1/core/constants/app_colos.dart';
 import 'package:travo_apps_1/view/dtomic/button/buttons.dart';
 import 'package:travo_apps_1/view/dtomic/text_widget/text_widget.dart';
 
-import '../../../core/app_routers/routes_name.dart';
 import '../../../core/constants/assets.dart';
 import '../../dtomic/image_card/image_card_one.dart';
 
@@ -41,9 +40,6 @@ class _GuestAndRoomState extends State<GuestAndRoom> {
             },
             fontSizeTitle: 30,
             fontWeightTitle: FontWeight.w500,
-            textLeft: 68,
-            textTop: 58,
-            textRight: 69,
             title: 'Add ',
             distance: 0,
             subTitle: 'guest and room ',

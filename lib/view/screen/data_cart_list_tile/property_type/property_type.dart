@@ -62,10 +62,6 @@ class _PropertyTypeState extends State<PropertyType> {
               onTapIcon: () {
                 context.pop();
               },
-              textBottom: 0,
-              textLeft: 87,
-              textRight: 88,
-              textTop: 60,
               title: 'Property type',
             ),
             Padding(

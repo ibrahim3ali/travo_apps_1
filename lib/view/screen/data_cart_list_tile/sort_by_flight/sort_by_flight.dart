@@ -60,10 +60,6 @@ class _SortByflightState extends State<SortByflight> {
               onTapIcon: () {
                 Navigator.pop(context);
               },
-              textBottom: 0,
-              textLeft: 135.w,
-              textRight: 135.w,
-              textTop: 60,
               title: 'Sort by',
             ),
             Padding(

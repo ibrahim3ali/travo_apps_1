@@ -14,10 +14,10 @@ class ImageCardOne extends StatelessWidget {
     this.borderIconColor = AppColos.white,
     this.icon = Icons.arrow_back_sharp,
     this.iconColor = AppColos.nero,
-    this.textBottom = 13,
-    this.textLeft = 138,
-    this.textRight = 137,
-    this.textTop = 113,
+    // this.textBottom = 13,
+    // this.textLeft = 138,
+    // this.textRight = 137,
+    // this.textTop = 113,
     this.fontSizeTitle = 30,
     this.distance = 20,
     this.fontSizeSubTitle = 12,
@@ -31,10 +31,11 @@ class ImageCardOne extends StatelessWidget {
     this.heightTitle = 80,
   });
 
-  final double? textBottom,
-      textLeft,
-      textRight,
-      textTop,
+  final double?
+      // textBottom,
+      // textLeft,
+      // textRight,
+      // textTop,
       fontSizeTitle,
       distance,
       fontSizeSubTitle;
@@ -83,10 +84,9 @@ class ImageCardOne extends StatelessWidget {
           ),
         ),
         Positioned(
-          bottom: textBottom,
-          left: textLeft,
-          right: textRight,
-          top: textTop,
+          left: 0.w,
+          right: 0.w,
+          top: 70.h,
           child: isTitle
               ? TitleWidget(
                   title: title,

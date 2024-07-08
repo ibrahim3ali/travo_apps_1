@@ -55,8 +55,6 @@ class _BookingHotelState extends State<BookingHotel> {
             },
             title: 'Hotel Booking',
             fontSizeTitle: 30.sp,
-            textLeft: 53.w,
-            textRight: 52.w,
             fontSizeSubTitle: 12.sp,
             subTitle: 'Choose your favorite hotel and enjoy the service',
           ),

@@ -42,14 +42,10 @@ class _LoginState extends State<Login> {
                   onTapIcon: () {
                     context.goNamed(RoutesName.login);
                   },
-                  textLeft: 130.w,
                   fontSizeSubTitle: 14.sp,
                   fontSizeTitle: 30.sp,
-                  textRight: 130.w,
                   distance: 15.h,
                   title: 'Login',
-                  textBottom: 13.h,
-                  textTop: 101.h,
                   subTitle: 'Hi, Welcome back!',
                 ),
                 Padding(

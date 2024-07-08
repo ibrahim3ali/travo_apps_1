@@ -31,11 +31,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 onTapIcon: () {
                   context.pop();
                 },
-                textBottom: 10.h,
                 distance: 15.h,
-                textLeft: 40.w,
-                textRight: 40.w,
-                textTop: 105.h,
                 title: 'Forgot Password',
                 fontSizeTitle: 30,
                 fontWeightTitle: FontWeight.w500,

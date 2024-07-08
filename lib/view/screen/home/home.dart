@@ -22,7 +22,7 @@ class _HomeState extends State<Home> {
   final _currentIndex = 0;
 
   bool isActive = false;
-  final _pageController = PageController();
+  final pageController = PageController();
 
   @override
   Widget build(BuildContext context) {

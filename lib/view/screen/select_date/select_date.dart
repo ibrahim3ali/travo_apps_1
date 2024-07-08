@@ -47,10 +47,6 @@ class _SelectDateState extends State<SelectDate> {
                 Navigator.pop(context);
               },
               title: 'Select date',
-              textRight: 105.w,
-              textLeft: 105.w,
-              textTop: 58,
-              textBottom: 0,
             ),
             Padding(
               padding: REdgeInsets.only(
