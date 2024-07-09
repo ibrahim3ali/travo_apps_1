@@ -29,29 +29,29 @@ class _ResultFlightState extends State<ResultFlight> {
     {
       'image': ImageResultFlight.alt03,
       'departure': '06:01am',
-      'flightNo': '09:15am',
-      'arrive': 'ALT03',
+      'flightNo': 'ALT03',
+      'arrive': '09:15am',
       'number': '\$249',
     },
     {
       'image': ImageResultFlight.flg15,
       'departure': '04:30pm',
-      'flightNo': '08:49pm',
-      'arrive': 'FLG15',
+      'flightNo': 'FLG15',
+      'arrive': '08:49pm',
       'number': '\$253',
     },
     {
       'image': ImageResultFlight.htl09,
       'departure': '08:30pm',
-      'flightNo': '00:01am',
-      'arrive': 'HTL09',
+      'flightNo': 'HTL09',
+      'arrive': '00:01am',
       'number': '\$227',
     },
     {
       'image': ImageResultFlight.lnr14,
       'departure': '05:21',
-      'flightNo': '08:43',
-      'arrive': 'LNR14',
+      'flightNo': 'LNR14',
+      'arrive': '08:43',
       'number': '\$124',
     },
   ];
@@ -84,7 +84,7 @@ class _ResultFlightState extends State<ResultFlight> {
               leftColumn: 100.w,
               topColumn: 60.h,
               widthColumn: 216.w,
-              heightColumn: 53.h,
+              heightColumn: 68.h,
               children: [
                 Row(
                   children: [
@@ -201,144 +201,152 @@ class _ResultFlightState extends State<ResultFlight> {
               top: 120,
               right: 25,
               left: 30,
-              child: Center(
-                child: SizedBox(
-                  width: 411.w,
-                  height: height,
-                  child: ListView.separated(
-                    itemCount: flightCard.length,
-                    separatorBuilder: (context, index) => const SizedBox(
-                      height: 20,
+              child: SizedBox(
+                width: 411.w,
+                height: height,
+                child: Column(
+                  children: [
+                    Expanded(
+                      child: ListView.separated(
+                        itemCount: flightCard.length,
+                        separatorBuilder: (context, index) => const SizedBox(
+                          height: 20,
+                        ),
+                        itemBuilder: (context, index) {
+                          return Row(
+                            children: [
+                              Container(
+                                width: 351.w,
+                                padding: REdgeInsets.only(
+                                  left: 15,
+                                  right: 15,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: AppColos.white,
+                                  borderRadius: BorderRadius.circular(12.r),
+                                ),
+                                child: Row(
+                                  children: [
+                                    Image.asset(flightCard[index]['image']),
+                                    SizedBox(
+                                      width: 10.w,
+                                    ),
+                                    Column(
+                                      children: [
+                                        Container(
+                                          width: 20.w,
+                                          height: 20.w,
+                                          decoration: const BoxDecoration(
+                                              color: Color(0xffE5E5E5),
+                                              shape: BoxShape.circle),
+                                        ),
+                                        SizedBox(
+                                          height: 100.h,
+                                          child: const VerticalDivider(
+                                            color: Color(0xffE5E5E5),
+                                          ),
+                                        ),
+                                        Container(
+                                          width: 20.w,
+                                          height: 20.w,
+                                          decoration: const BoxDecoration(
+                                              color: Color(0xffE5E5E5),
+                                              shape: BoxShape.circle),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      width: 25.w,
+                                    ),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        SizedBox(
+                                          height: 12.h,
+                                        ),
+                                        TitleWidget(
+                                          title: 'Departure',
+                                          fontSizeTitle: 14.sp,
+                                          fontWeightTitle: FontWeight.w400,
+                                          colorTitle: const Color(0xff636363),
+                                          distance: 10.h,
+                                          subTitle: flightCard[index]
+                                              ['departure'],
+                                          fontSizeSubTitle: 16.sp,
+                                          fontWeightSubTitle: FontWeight.w800,
+                                          colorSubTitle: Colors.black,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                        ),
+                                        SizedBox(
+                                          height: 20.h,
+                                        ),
+                                        TitleWidget(
+                                          title: 'Flight No.',
+                                          fontSizeTitle: 14.sp,
+                                          fontWeightTitle: FontWeight.w400,
+                                          colorTitle: const Color(0xff636363),
+                                          distance: 10.h,
+                                          subTitle: flightCard[index]
+                                              ['flightNo'],
+                                          fontSizeSubTitle: 16.sp,
+                                          fontWeightSubTitle: FontWeight.w800,
+                                          colorSubTitle: Colors.black,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                        ),
+                                        SizedBox(
+                                          height: 11.h,
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      width: 42.w,
+                                    ),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        TitleWidget(
+                                          title: 'Arrive',
+                                          fontSizeTitle: 14.sp,
+                                          fontWeightTitle: FontWeight.w400,
+                                          colorTitle: const Color(0xff636363),
+                                          distance: 10.h,
+                                          subTitle: flightCard[index]['arrive'],
+                                          fontSizeSubTitle: 16.sp,
+                                          fontWeightSubTitle: FontWeight.w800,
+                                          colorSubTitle: Colors.black,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                        ),
+                                        SizedBox(
+                                          height: 44.h,
+                                        ),
+                                        TextWidget(
+                                          text: flightCard[index]['number'],
+                                          fontSize: 20.sp,
+                                          fontWeight: FontWeight.w800,
+                                          color: Colors.black,
+                                        ),
+                                        SizedBox(
+                                          height: 11.h,
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          );
+                        },
+                      ),
                     ),
-                    itemBuilder: (context, index) {
-                      return Row(
-                        children: [
-                          Container(
-                            width: 351.w,
-                            padding: REdgeInsets.only(
-                              left: 15,
-                              right: 15,
-                            ),
-                            decoration: BoxDecoration(
-                              color: AppColos.white,
-                              borderRadius: BorderRadius.circular(12.r),
-                            ),
-                            child: Row(
-                              children: [
-                                Image.asset(flightCard[index]['image']),
-                                SizedBox(
-                                  width: 10.w,
-                                ),
-                                Column(
-                                  children: [
-                                    Container(
-                                      width: 20.w,
-                                      height: 20.w,
-                                      decoration: const BoxDecoration(
-                                          color: Color(0xffE5E5E5),
-                                          shape: BoxShape.circle),
-                                    ),
-                                    SizedBox(
-                                      height: 100.h,
-                                      child: const VerticalDivider(
-                                        color: Color(0xffE5E5E5),
-                                      ),
-                                    ),
-                                    Container(
-                                      width: 20.w,
-                                      height: 20.w,
-                                      decoration: const BoxDecoration(
-                                          color: Color(0xffE5E5E5),
-                                          shape: BoxShape.circle),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(
-                                  width: 25.w,
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    SizedBox(
-                                      height: 12.h,
-                                    ),
-                                    TitleWidget(
-                                      title: 'Departure',
-                                      fontSizeTitle: 14.sp,
-                                      fontWeightTitle: FontWeight.w400,
-                                      colorTitle: const Color(0xff636363),
-                                      distance: 10.h,
-                                      subTitle: flightCard[index]['departure'],
-                                      fontSizeSubTitle: 16.sp,
-                                      fontWeightSubTitle: FontWeight.w800,
-                                      colorSubTitle: Colors.black,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                    ),
-                                    SizedBox(
-                                      height: 20.h,
-                                    ),
-                                    TitleWidget(
-                                      title: 'Flight No.',
-                                      fontSizeTitle: 14.sp,
-                                      fontWeightTitle: FontWeight.w400,
-                                      colorTitle: const Color(0xff636363),
-                                      distance: 10.h,
-                                      subTitle: flightCard[index]['flightNo'],
-                                      fontSizeSubTitle: 16.sp,
-                                      fontWeightSubTitle: FontWeight.w800,
-                                      colorSubTitle: Colors.black,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                    ),
-                                    SizedBox(
-                                      height: 11.h,
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(
-                                  width: 42.w,
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    const SizedBox(
-                                      height: 12,
-                                    ),
-                                    TitleWidget(
-                                      title: 'Arrive',
-                                      fontSizeTitle: 14.sp,
-                                      fontWeightTitle: FontWeight.w400,
-                                      colorTitle: const Color(0xff636363),
-                                      distance: 10.h,
-                                      subTitle: flightCard[index]['arrive'],
-                                      fontSizeSubTitle: 16.sp,
-                                      fontWeightSubTitle: FontWeight.w800,
-                                      colorSubTitle: Colors.black,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                    ),
-                                    SizedBox(
-                                      height: 32.h,
-                                    ),
-                                    TextWidget(
-                                      text: flightCard[index]['number'],
-                                      fontSize: 20.sp,
-                                      fontWeight: FontWeight.w800,
-                                      color: Colors.black,
-                                    ),
-                                    SizedBox(
-                                      height: 11.h,
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      );
-                    },
-                  ),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                  ],
                 ),
               ),
             ),

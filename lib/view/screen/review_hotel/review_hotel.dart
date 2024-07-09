@@ -66,24 +66,21 @@ class _ReviewHotelState extends State<ReviewHotel> {
               lsftTitle: 150.w,
               imageIcon: ImageResultHotel.solid,
             ),
-            Positioned(
+            Positioned.fill(
               top: 129,
               right: 25,
               left: 25,
               child: SingleChildScrollView(
                 child: SizedBox(
                   width: 411.w,
-                  height: height.h,
                   child: Column(
                     children: [
                       InitialRatingWidget(initialRating: initialRating),
                       SizedBox(
-                        height: 20.h,
-                      ),
-                      SizedBox(
                         width: 411.w,
-                        height: 500.h,
+                        height: MediaQuery.sizeOf(context).height * 0.91,
                         child: ListView.separated(
+                          physics: NeverScrollableScrollPhysics(),
                           itemBuilder: (context, index) {
                             return Container(
                               width: 411.w,
@@ -275,17 +272,10 @@ class InitialRatingWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 411.w,
-      height: 150.h,
-      padding: REdgeInsets.only(
-        top: 17,
-        bottom: 16,
-        right: 21,
-        left: 15,
-      ),
+      padding: REdgeInsets.all(20),
       decoration: BoxDecoration(
           color: AppColos.white, borderRadius: BorderRadius.circular(12)),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           SizedBox(
             width: 100.w,
@@ -321,11 +311,12 @@ class InitialRatingWidget extends StatelessWidget {
           ),
           SizedBox(
             width: 192.w,
-            height: 150.h,
+            height: 135.h,
             child: ListView.separated(
               separatorBuilder: (context, index) => SizedBox(
                 height: 5.h,
               ),
+              padding: EdgeInsets.zero,
               itemCount: initialRating.length,
               itemBuilder: (context, index) {
                 return Row(

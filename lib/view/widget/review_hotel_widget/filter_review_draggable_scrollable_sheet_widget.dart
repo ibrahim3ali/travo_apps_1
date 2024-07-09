@@ -144,7 +144,7 @@ class _FilterReviewDraggableScrollableSheetWidgetState
                   ),
                   SizedBox(
                     width: 411.w,
-                    height: 112.h,
+                    height: MediaQuery.sizeOf(context).height * 0.19.h,
                     child: ListView.separated(
                       physics: const NeverScrollableScrollPhysics(),
                       itemBuilder: (context, index) => Row(
@@ -203,7 +203,7 @@ class _FilterReviewDraggableScrollableSheetWidgetState
                   ),
                   SizedBox(
                     width: 411.w,
-                    height: 65.h,
+                    height: MediaQuery.sizeOf(context).height * 0.13.h,
                     child: ListView.separated(
                       physics: const NeverScrollableScrollPhysics(),
                       itemBuilder: (context, index) => Row(

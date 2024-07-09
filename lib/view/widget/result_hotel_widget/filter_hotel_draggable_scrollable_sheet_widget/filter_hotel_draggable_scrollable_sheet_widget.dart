@@ -146,7 +146,7 @@ class _FilterHotelDraggableScrollableSheetWidgetState
                   ),
                   SizedBox(
                     width: 411.w,
-                    height: 220.h,
+                    height: MediaQuery.sizeOf(context).height * 0.40.h,
                     child: ListView.separated(
                         physics: const NeverScrollableScrollPhysics(),
                         itemBuilder: (context, index) {

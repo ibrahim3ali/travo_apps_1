@@ -121,7 +121,7 @@ class _BookingFlightState extends State<BookingFlight> {
                   children: [
                     SizedBox(
                       width: 411.w,
-                      height: height.h,
+                      height: height * 0.73.h,
                       child: PageView(
                         children: [
                           itam[_index]['screen'],

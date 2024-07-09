@@ -5,7 +5,6 @@ import '../../../../core/constants/app_colos.dart';
 import '../../../../core/constants/assets.dart';
 import '../../../dtomic/text_widget/text_widget.dart';
 import '../../../dtomic/title_widget/title_widget.dart';
-import '../one_way_widget/one_way_widget.dart';
 
 class MultiCityWidget extends StatefulWidget {
   const MultiCityWidget({

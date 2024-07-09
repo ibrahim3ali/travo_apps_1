@@ -56,7 +56,7 @@ class _GuestAndRoomState extends State<GuestAndRoom> {
               children: [
                 SizedBox(
                   width: 411.w,
-                  height: 190.h,
+                  height: 220.h,
                   child: ListView.separated(
                     itemBuilder: (context, index) {
                       return Container(
@@ -136,22 +136,29 @@ class _GuestAndRoomState extends State<GuestAndRoom> {
                 const SizedBox(
                   height: 25,
                 ),
-                Buttons(
-                  onPressed: () {
-                    context.pop();
-                  },
-                  isText: true,
-                  borderColor: AppColos.linear,
-                  borderRadius: 30.r,
-                  fontWeightText: FontWeight.w500,
-                  fontSizeText: 18,
-                  width: 411.w,
-                  text: 'Done',
-                ),
               ],
             ),
           )
         ],
+      ),
+      bottomNavigationBar: Padding(
+        padding: REdgeInsets.only(
+          bottom: 50,
+          right: 25,
+          left: 25,
+        ),
+        child: Buttons(
+          onPressed: () {
+            context.pop();
+          },
+          isText: true,
+          borderColor: AppColos.linear,
+          borderRadius: 30.r,
+          fontWeightText: FontWeight.w500,
+          fontSizeText: 18,
+          width: 411.w,
+          text: 'Done',
+        ),
       ),
     );
   }

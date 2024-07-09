@@ -65,15 +65,15 @@ class _FlightAndHotelState extends State<FlightAndHotel> {
               fontWeightTitle: FontWeight.bold,
               distance: 0.h,
               title: 'Book Your',
-              subTitle: 'Flight',
+              subTitle: 'Flight and Hotel',
               fontSizeSubTitle: 29.sp,
               fontWeightSubTitle: FontWeight.bold,
               colorTitle: AppColos.white,
             ),
             Positioned.fill(
-              left: 80.w,
-              right: 80.w,
-              top: 220,
+              left: 80,
+              right: 71,
+              top: 180,
               child: SizedBox(
                 width: 411.w,
                 height: height,
@@ -82,23 +82,19 @@ class _FlightAndHotelState extends State<FlightAndHotel> {
                     SizedBox(
                       width: 411.w,
                       height: 40.h,
-                      child: Center(
-                        child: Row(
-                          children: List.generate(
-                            itam.length,
-                            (index) => Row(
-                              children: [
-                                Center(
-                                  child: ListButtonWidget(
-                                    isActive: index == _index,
-                                    text: itam[index]['text'],
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 10.w,
-                                ),
-                              ],
-                            ),
+                      child: Row(
+                        children: List.generate(
+                          itam.length,
+                          (index) => Row(
+                            children: [
+                              ListButtonWidget(
+                                isActive: index == _index,
+                                text: itam[index]['text'],
+                              ),
+                              SizedBox(
+                                width: 10.w,
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -110,13 +106,13 @@ class _FlightAndHotelState extends State<FlightAndHotel> {
             Positioned.fill(
               left: 25,
               right: 25,
-              top: 280,
+              top: 230,
               child: SingleChildScrollView(
                 child: Column(
                   children: [
                     SizedBox(
                       width: 411.w,
-                      height: height,
+                      height: height * 0.73.h,
                       child: PageView(
                         children: [
                           itam[_index]['screen'],
@@ -150,7 +146,7 @@ class _FlightAndHotelState extends State<FlightAndHotel> {
           borderColor: AppColos.linear,
           borderRadius: 30,
           isText: true,
-          text: 'Next',
+          text: 'Search',
           fontSizeText: 20.sp,
           fontWeightText: FontWeight.bold,
           colorText: AppColos.white,

@@ -93,7 +93,7 @@ class _OneWayWidgetState extends State<OneWayWidget> {
           ),
           Positioned.fill(
             left: 260.w,
-            bottom: 510.h,
+            bottom: 320.h,
             child: Image.asset(ImageBookingFlight.way),
           )
         ],

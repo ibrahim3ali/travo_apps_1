@@ -5,7 +5,6 @@ import 'package:travo_apps_1/core/app_routers/routes_name.dart';
 
 import '../../../../core/constants/app_colos.dart';
 import '../../../../core/constants/assets.dart';
-import '../../../dtomic/button/buttons.dart';
 import '../../../dtomic/text_widget/text_widget.dart';
 import '../../../dtomic/title_widget/title_widget.dart';
 

@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/constants/app_colos.dart';
 import '../../../../core/constants/assets.dart';
 import '../../../dtomic/title_widget/title_widget.dart';
-import '../one_way_widget/one_way_widget.dart';
 
 class RoundTripWidget extends StatefulWidget {
   const RoundTripWidget({
@@ -100,7 +99,7 @@ class _RoundTripWidgetState extends State<RoundTripWidget> {
           ),
           Positioned.fill(
             left: 260.w,
-            bottom: 510.h,
+            bottom: 320.h,
             child: Image.asset(ImageBookingFlight.way),
           )
         ],

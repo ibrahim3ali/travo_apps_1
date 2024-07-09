@@ -144,7 +144,7 @@ class _SelectSeatState extends State<SelectSeat> {
                         ),
                         SizedBox(
                           width: 60.w,
-                          height: 140.h,
+                          height: 155.h,
                           child: Column(
                             children: [
                               TextWidget(
@@ -175,7 +175,7 @@ class _SelectSeatState extends State<SelectSeat> {
                       width: 10.w,
                     ),
                     Container(
-                      width: 230.w,
+                      width: 240.w,
                       padding: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                           color: AppColos.white,
@@ -602,9 +602,6 @@ class _SelectSeatState extends State<SelectSeat> {
                       width: 10,
                     ),
                   ],
-                ),
-                const SizedBox(
-                  height: 10,
                 ),
                 const SizedBox(
                   height: 10,

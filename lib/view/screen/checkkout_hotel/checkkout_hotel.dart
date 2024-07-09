@@ -36,7 +36,6 @@ class _CheckkoutHotelState extends State<CheckkoutHotel> {
       {
         'isActive': false,
         'number': '1',
-        'height': 700.0,
         'title': 'Book and Review',
         'screen': const CheckkoutHotel1Widget(),
         'button': 'Payment',
@@ -47,7 +46,6 @@ class _CheckkoutHotelState extends State<CheckkoutHotel> {
       {
         'isActive': true,
         'number': '2',
-        'height': 450.0,
         'title': 'Payment',
         'screen': const CheckkoutHotel2Widget(),
         'button': 'Done',
@@ -59,7 +57,6 @@ class _CheckkoutHotelState extends State<CheckkoutHotel> {
         'isActive': true,
         'number': '3',
         'title': 'Confirm',
-        'height': 530.0,
         'screen': const CheckkoutHotel3Widget(),
         'button': 'Pay Now',
         'onPressed': () {
@@ -73,79 +70,80 @@ class _CheckkoutHotelState extends State<CheckkoutHotel> {
     return Scaffold(
       body: SizedBox(
         height: height,
-        child: Stack(
-          clipBehavior: Clip.none,
+        child: Column(
           children: [
-            ImageCardThree(
-              isColumn: false,
-              onTapIcon: () {
-                context.pop();
-              },
-              topTitle: 58.h,
-              rightTitle: 100,
-              lsftTitle: 130,
-              isIconTwo: false,
-              title: 'Checkout',
-              fontSizeTitle: 30.sp,
-              fontWeightTitle: FontWeight.bold,
-              colorTitle: AppColos.white,
-            ),
-            Positioned(
-              left: 25,
-              right: 25,
-              top: 144,
-              child: SizedBox(
-                width: 411.w,
-                height: 24.h,
-                child: Row(
-                  children: List.generate(
-                    cardScreen.length,
-                    (index) {
-                      return Row(
-                        children: [
-                          ContainerBoolWidget(
-                            title: cardScreen[index]['title'],
-                            number: cardScreen[index]['number'],
-                            isActive: index == _index,
-                          ),
-                          SizedBox(
-                            width: 10.w,
-                          ),
-                          if (index < (cardScreen.length - 1))
-                            const SizedBox(
-                              width: 16,
-                              height: 1,
-                              child: Divider(
-                                color: AppColos.white,
-                              ),
-                            ),
-                        ],
-                      );
-                    },
-                  ),
+            Stack(
+              clipBehavior: Clip.none,
+              children: [
+                ImageCardThree(
+                  isColumn: false,
+                  onTapIcon: () {
+                    context.pop();
+                  },
+                  topTitle: 58.h,
+                  rightTitle: 100,
+                  lsftTitle: 130,
+                  isIconTwo: false,
+                  title: 'Checkout',
+                  fontSizeTitle: 30.sp,
+                  fontWeightTitle: FontWeight.bold,
+                  colorTitle: AppColos.white,
                 ),
-              ),
-            ),
-            Expanded(
-              child: Positioned.fill(
-                top: 170.h,
-                right: 25.w,
-                left: 25.w,
-                child: SingleChildScrollView(
+                Positioned(
+                  left: 25,
+                  right: 25,
+                  top: 120,
                   child: SizedBox(
                     width: 411.w,
-                    height: cardScreen[_index]['height'],
-                    child: PageView(
-                      children: [
-                        cardScreen[_index]['screen'],
-                      ],
-                      onPageChanged: (pageIndex) {
-                        setState(() {
-                          pageIndex == _index;
-                        });
-                      },
+                    height: 24.h,
+                    child: Row(
+                      children: List.generate(
+                        cardScreen.length,
+                        (index) {
+                          return Row(
+                            children: [
+                              ContainerBoolWidget(
+                                title: cardScreen[index]['title'],
+                                number: cardScreen[index]['number'],
+                                isActive: index == _index,
+                              ),
+                              SizedBox(
+                                width: 10.w,
+                              ),
+                              if (index < (cardScreen.length - 1))
+                                const SizedBox(
+                                  width: 16,
+                                  height: 1,
+                                  child: Divider(
+                                    color: AppColos.white,
+                                  ),
+                                ),
+                            ],
+                          );
+                        },
+                      ),
                     ),
                   ),
+                ),
+              ],
+            ),
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.only(
+                  top: 20.h,
+                  right: 25.w,
+                  left: 25.w,
+                  bottom: 10.h,
+                ),
+                child: PageView(
+                  children: [
+                    cardScreen[_index]['screen'],
+                  ],
+                  onPageChanged: (pageIndex) {
+                    setState(() {
+                      pageIndex == _index;
+                    });
+                  },
                 ),
               ),
             ),

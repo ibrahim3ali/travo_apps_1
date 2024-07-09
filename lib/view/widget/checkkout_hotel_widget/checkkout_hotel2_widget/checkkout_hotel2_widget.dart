@@ -35,11 +35,13 @@ class _CheckkoutHotel2WidgetState extends State<CheckkoutHotel2Widget> {
   ];
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.sizeOf(context).height;
+
     return Column(
       children: [
         SizedBox(
           width: 411.w,
-          height: 320.h,
+          height: height * 0.70.h,
           child: ListView.separated(
             separatorBuilder: (context, index) => const SizedBox(
               height: 20,
@@ -60,7 +62,6 @@ class _CheckkoutHotel2WidgetState extends State<CheckkoutHotel2Widget> {
             },
           ),
         ),
-     
       ],
     );
   }
