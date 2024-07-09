@@ -42,118 +42,120 @@ class _AddPassengersState extends State<AddPassengers> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          ImageCardOne(
-            onTapIcon: () {
-              Navigator.pop(context);
-            },
-            fontSizeTitle: 30.sp,
-            fontWeightTitle: FontWeight.w500,
-            title: 'Add ',
-            distance: 0,
-            subTitle: 'passengers',
-            fontSizeSubTitle: 30.sp,
-            fontWeightSubTitle: FontWeight.w500,
-          ),
-          Padding(
-            padding: REdgeInsets.only(
-              top: 20,
-              right: 25,
-              left: 25,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            ImageCardOne(
+              onTapIcon: () {
+                Navigator.pop(context);
+              },
+              fontSizeTitle: 30.sp,
+              fontWeightTitle: FontWeight.w500,
+              title: 'Add ',
+              distance: 0,
+              subTitle: 'passengers',
+              fontSizeSubTitle: 30.sp,
+              fontWeightSubTitle: FontWeight.w500,
             ),
-            child: Column(
-              children: [
-                SizedBox(
-                  width: 411.w,
-                  height: 280.h,
-                  child: ListView.separated(
-                    itemBuilder: (context, index) {
-                      return Container(
-                        width: 411.w,
-                        padding:
-                            REdgeInsets.symmetric(horizontal: 20, vertical: 19),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(12.r),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Image.asset(cartGuestAndRoom[index]['image']),
-                            TitleWidget(
-                              title: cartGuestAndRoom[index]['text'],
-                              fontSizeTitle: 16.sp,
-                              fontWeightTitle: FontWeight.w400,
-                              colorTitle: Colors.black,
-                              distance: 5.h,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              subTitle: cartGuestAndRoom[index]['title'],
-                              fontSizeSubTitle: 12.h,
-                              fontWeightSubTitle: FontWeight.w400,
-                              colorSubTitle: const Color(0xff636363),
-                            ),
-                            SizedBox(
-                              width: 10.w,
-                            ),
-                            InkWell(
-                              borderRadius: BorderRadius.circular(16.r),
-                              onTap: () {
-                                setState(() {
-                                  cartGuestAndRoom[index]['top']--;
-                                  if (cartGuestAndRoom[index]['top'] >= 0) {}
-                                });
-                              },
-                              child: CircleAvatar(
-                                backgroundColor: const Color(0xff3EC8BC),
-                                radius: 16.r,
-                                child: Icon(
-                                  Icons.remove,
-                                  color: Colors.white,
-                                  size: 20.sp,
+            Padding(
+              padding: REdgeInsets.only(
+                top: 20,
+                right: 25,
+                left: 25,
+              ),
+              child: Column(
+                children: [
+                  SizedBox(
+                    width: 411.w,
+                    height: MediaQuery.sizeOf(context).height * .50.h,
+                    child: ListView.separated(
+                      itemBuilder: (context, index) {
+                        return Container(
+                          width: 411.w,
+                          padding: REdgeInsets.symmetric(
+                              horizontal: 20, vertical: 19),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(12.r),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Image.asset(cartGuestAndRoom[index]['image']),
+                              TitleWidget(
+                                title: cartGuestAndRoom[index]['text'],
+                                fontSizeTitle: 16.sp,
+                                fontWeightTitle: FontWeight.w400,
+                                colorTitle: Colors.black,
+                                distance: 5.h,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                subTitle: cartGuestAndRoom[index]['title'],
+                                fontSizeSubTitle: 12.h,
+                                fontWeightSubTitle: FontWeight.w400,
+                                colorSubTitle: const Color(0xff636363),
+                              ),
+                              SizedBox(
+                                width: 10.w,
+                              ),
+                              InkWell(
+                                borderRadius: BorderRadius.circular(16.r),
+                                onTap: () {
+                                  setState(() {
+                                    cartGuestAndRoom[index]['top']--;
+                                    if (cartGuestAndRoom[index]['top'] >= 0) {}
+                                  });
+                                },
+                                child: CircleAvatar(
+                                  backgroundColor: const Color(0xff3EC8BC),
+                                  radius: 16.r,
+                                  child: Icon(
+                                    Icons.remove,
+                                    color: Colors.white,
+                                    size: 20.sp,
+                                  ),
                                 ),
                               ),
-                            ),
-                            TextWidget(
-                              text: cartGuestAndRoom[index]['top'].toString(),
-                              fontSize: 18.sp,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black,
-                            ),
-                            InkWell(
-                              borderRadius: BorderRadius.circular(16.r),
-                              onTap: () {
-                                setState(() {
-                                  cartGuestAndRoom[index]['top']++;
-                                });
-                              },
-                              child: CircleAvatar(
-                                backgroundColor: const Color(0xff3EC8BC),
-                                radius: 16.r,
-                                child: Icon(
-                                  Icons.add,
-                                  color: Colors.white,
-                                  size: 20.sp,
+                              TextWidget(
+                                text: cartGuestAndRoom[index]['top'].toString(),
+                                fontSize: 18.sp,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.black,
+                              ),
+                              InkWell(
+                                borderRadius: BorderRadius.circular(16.r),
+                                onTap: () {
+                                  setState(() {
+                                    cartGuestAndRoom[index]['top']++;
+                                  });
+                                },
+                                child: CircleAvatar(
+                                  backgroundColor: const Color(0xff3EC8BC),
+                                  radius: 16.r,
+                                  child: Icon(
+                                    Icons.add,
+                                    color: Colors.white,
+                                    size: 20.sp,
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
-                        ),
-                      );
-                    },
-                    separatorBuilder: (context, index) => SizedBox(
-                      height: 20.h,
+                            ],
+                          ),
+                        );
+                      },
+                      separatorBuilder: (context, index) => SizedBox(
+                        height: 20.h,
+                      ),
+                      itemCount: cartGuestAndRoom.length,
                     ),
-                    itemCount: cartGuestAndRoom.length,
                   ),
-                ),
-                SizedBox(
-                  height: 25.h,
-                ),
-              ],
-            ),
-          )
-        ],
+                  SizedBox(
+                    height: 25.h,
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
       bottomNavigationBar: Padding(
         padding: REdgeInsets.only(

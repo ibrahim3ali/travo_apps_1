@@ -29,76 +29,79 @@ class _AddPassengerState extends State<AddPassenger> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          ImageCardOne(
-            onTapIcon: () {
-              Navigator.pop(context);
-            },
-            fontSizeTitle: 30.sp,
-            fontWeightTitle: FontWeight.w500,
-            title: 'Add',
-            distance: 0,
-            subTitle: 'Passenger',
-            fontSizeSubTitle: 30.sp,
-            fontWeightSubTitle: FontWeight.w500,
-          ),
-          Form(
-            key: formfield,
-            child: Padding(
-              padding: REdgeInsets.all(25),
-              child: Column(
-                children: [
-                  FormNameWidget(nameController: nameController),
-                  SizedBox(
-                    height: 20.h,
-                  ),
-                  CustomTextFormField(
-                    contentPadding: REdgeInsets.all(15),
-                    labelText: 'Identity Number',
-                    borderRadius: 5,
-                    keyboardType: TextInputType.emailAddress,
-                    inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-                    controller: identityNumberController,
-                    validator: OrdersValidator.numberId,
-                    borderColor: Colors.black12,
-                    prefixIcon: SizedBox(
-                      width: 65.w,
-                      child: Row(
-                        children: [
-                          SizedBox(
-                            width: 10.w,
-                          ),
-                          TextWidget(
-                            text: 'KTP',
-                            fontSize: 10.sp,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black,
-                          ),
-                          SizedBox(
-                            width: 5.w,
-                          ),
-                          Icon(
-                            Icons.keyboard_arrow_down,
-                            size: 16.sp,
-                          ),
-                          SizedBox(height: 20.h, child: const VerticalDivider())
-                        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            ImageCardOne(
+              onTapIcon: () {
+                Navigator.pop(context);
+              },
+              fontSizeTitle: 30.sp,
+              fontWeightTitle: FontWeight.w500,
+              title: 'Add',
+              distance: 0,
+              subTitle: 'Passenger',
+              fontSizeSubTitle: 30.sp,
+              fontWeightSubTitle: FontWeight.w500,
+            ),
+            Form(
+              key: formfield,
+              child: Padding(
+                padding: REdgeInsets.all(25),
+                child: Column(
+                  children: [
+                    FormNameWidget(nameController: nameController),
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                    CustomTextFormField(
+                      contentPadding: REdgeInsets.all(15),
+                      labelText: 'Identity Number',
+                      borderRadius: 5,
+                      keyboardType: TextInputType.emailAddress,
+                      inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                      controller: identityNumberController,
+                      validator: OrdersValidator.numberId,
+                      borderColor: Colors.black12,
+                      prefixIcon: SizedBox(
+                        width: 67.w,
+                        child: Row(
+                          children: [
+                            SizedBox(
+                              width: 10.w,
+                            ),
+                            TextWidget(
+                              text: 'KTP',
+                              fontSize: 10.sp,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black,
+                            ),
+                            SizedBox(
+                              width: 5.w,
+                            ),
+                            Icon(
+                              Icons.keyboard_arrow_down,
+                              size: 16.sp,
+                            ),
+                            SizedBox(
+                                height: 20.h, child: const VerticalDivider())
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 20.h,
-                  ),
-                  FormEmailWidget(emailControler: emailController),
-                  SizedBox(
-                    height: 20.h,
-                  ),
-                ],
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                    FormEmailWidget(emailControler: emailController),
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
       bottomNavigationBar: Padding(
         padding: REdgeInsets.only(

@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/constants/app_colos.dart';
 import '../../../../core/constants/assets.dart';
 import '../../../dtomic/title_widget/title_widget.dart';
+import '../one_way_widget/one_way_widget.dart';
 
 class RoundTripWidget extends StatefulWidget {
   const RoundTripWidget({
@@ -67,7 +68,6 @@ class _RoundTripWidgetState extends State<RoundTripWidget> {
             itemBuilder: (context, index) {
               return Container(
                 width: 325.w,
-                height: 70.h,
                 padding: REdgeInsets.symmetric(
                   horizontal: 20,
                   vertical: 11,
@@ -100,7 +100,7 @@ class _RoundTripWidgetState extends State<RoundTripWidget> {
           ),
           Positioned.fill(
             left: 260.w,
-            bottom: 590.h,
+            bottom: 510.h,
             child: Image.asset(ImageBookingFlight.way),
           )
         ],

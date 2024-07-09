@@ -109,7 +109,7 @@ class CheckkoutFlight3Widget extends StatelessWidget {
                   height: 24,
                 ),
                 SizedBox(
-                  width: 256.w,
+                  width: 265.w,
                   child: Column(
                     children: [
                       Row(

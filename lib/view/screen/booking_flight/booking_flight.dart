@@ -82,7 +82,7 @@ class _BookingFlightState extends State<BookingFlight> {
             Positioned.fill(
               left: 25,
               right: 25,
-              top: 220,
+              top: 180,
               child: SizedBox(
                 width: 411.w,
                 height: height,
@@ -115,12 +115,13 @@ class _BookingFlightState extends State<BookingFlight> {
             Positioned.fill(
               left: 25,
               right: 25,
-              top: 280,
+              top: 230,
               child: SingleChildScrollView(
                 child: Column(
                   children: [
                     SizedBox(
                       width: 411.w,
+                      height: height.h,
                       child: PageView(
                         children: [
                           itam[_index]['screen'],

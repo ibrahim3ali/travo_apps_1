@@ -48,7 +48,7 @@ class _OneWayWidgetState extends State<OneWayWidget> {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 411.w,
-      height: MediaQuery.sizeOf(context).height * 0.55,
+      height: MediaQuery.sizeOf(context).height * 0.50,
       child: Stack(
         clipBehavior: Clip.none,
         children: [
@@ -61,7 +61,6 @@ class _OneWayWidgetState extends State<OneWayWidget> {
             itemBuilder: (context, index) {
               return Container(
                 width: 411.w,
-                height: 70.h,
                 padding: REdgeInsets.symmetric(
                   horizontal: 20,
                   vertical: 11,
@@ -94,7 +93,7 @@ class _OneWayWidgetState extends State<OneWayWidget> {
           ),
           Positioned.fill(
             left: 260.w,
-            bottom: 590.h,
+            bottom: 510.h,
             child: Image.asset(ImageBookingFlight.way),
           )
         ],

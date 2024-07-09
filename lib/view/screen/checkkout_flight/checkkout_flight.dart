@@ -70,86 +70,84 @@ class _CheckkoutFlightState extends State<CheckkoutFlight> {
     ];
 
     return Scaffold(
-      body: SizedBox(
-        height: height,
-        child: Stack(
-          clipBehavior: Clip.none,
-          children: [
-            ImageCardThree(
-              isColumn: false,
-              onTapIcon: () {
-                context.pop();
-              },
-              topTitle: 58.h,
-              rightTitle: 100,
-              lsftTitle: 130,
-              isIconTwo: false,
-              title: 'Checkout',
-              fontSizeTitle: 30.sp,
-              fontWeightTitle: FontWeight.bold,
-              colorTitle: AppColos.white,
-            ),
-            Positioned(
-              left: 25,
-              right: 25,
-              top: 144,
-              child: SizedBox(
-                width: 411.w,
-                height: 24.h,
-                child: Row(
-                  children: List.generate(
-                    cardScreen.length,
-                    (index) {
-                      return Row(
-                        children: [
-                          ContainerBoolWidget(
-                            title: cardScreen[index]['title'],
-                            number: cardScreen[index]['number'],
-                            isActive: index == _index,
-                          ),
-                          SizedBox(
-                            width: 10.w,
-                          ),
-                          if (index < (cardScreen.length - 1))
-                            const SizedBox(
-                              width: 16,
-                              height: 1,
-                              child: Divider(
-                                color: AppColos.white,
-                              ),
-                            ),
-                        ],
-                      );
-                    },
-                  ),
-                ),
+      body: Column(
+        children: [
+          Stack(
+            clipBehavior: Clip.none,
+            children: [
+              ImageCardThree(
+                isColumn: false,
+                onTapIcon: () {
+                  context.pop();
+                },
+                topTitle: 58.h,
+                rightTitle: 100,
+                lsftTitle: 130,
+                isIconTwo: false,
+                title: 'Checkout',
+                fontSizeTitle: 30.sp,
+                fontWeightTitle: FontWeight.bold,
+                colorTitle: AppColos.white,
               ),
-            ),
-            Expanded(
-              child: Positioned.fill(
-                top: 190.h,
-                right: 25.w,
-                left: 25.w,
-                child: SingleChildScrollView(
-                  child: SizedBox(
-                    width: 411.w,
-                    height: cardScreen[_index]['height'],
-                    child: PageView(
-                      children: [
-                        cardScreen[_index]['screen'],
-                      ],
-                      onPageChanged: (pageIndex) {
-                        setState(() {
-                          pageIndex == _index;
-                        });
+              Positioned(
+                left: 25,
+                right: 25,
+                top: 120,
+                child: SizedBox(
+                  width: 411.w,
+                  height: 24.h,
+                  child: Row(
+                    children: List.generate(
+                      cardScreen.length,
+                      (index) {
+                        return Row(
+                          children: [
+                            ContainerBoolWidget(
+                              title: cardScreen[index]['title'],
+                              number: cardScreen[index]['number'],
+                              isActive: index == _index,
+                            ),
+                            SizedBox(
+                              width: 10.w,
+                            ),
+                            if (index < (cardScreen.length - 1))
+                              const SizedBox(
+                                width: 16,
+                                height: 1,
+                                child: Divider(
+                                  color: AppColos.white,
+                                ),
+                              ),
+                          ],
+                        );
                       },
                     ),
                   ),
                 ),
               ),
+            ],
+          ),
+          Expanded(
+            child: Padding(
+              padding: EdgeInsets.only(
+                top: 20.h,
+                right: 25.w,
+                left: 25.w,
+                bottom: 10.h,
+              ),
+              child: PageView(
+                children: [
+                  cardScreen[_index]['screen'],
+                ],
+                onPageChanged: (pageIndex) {
+                  setState(() {
+                    pageIndex == _index;
+                  });
+                },
+              ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
       bottomNavigationBar: Padding(
         padding: REdgeInsets.only(top: 10, bottom: 15, left: 25, right: 25),

@@ -147,14 +147,14 @@ class _CheckkoutFlight1WidgetState extends State<CheckkoutFlight1Widget> {
                   height: 24,
                 ),
                 SizedBox(
-                  width: 256.w,
+                  width: 265.w,
                   child: Column(
                     children: [
                       Row(
                         children: [
                           Image.asset(ImageResultFlight.nns24),
-                          const SizedBox(
-                            width: 15,
+                          SizedBox(
+                            width: 15.w,
                           ),
                           const TitleWidget(
                             title: 'Airline',
@@ -168,8 +168,8 @@ class _CheckkoutFlight1WidgetState extends State<CheckkoutFlight1Widget> {
                             colorSubTitle: Colors.black,
                             crossAxisAlignment: CrossAxisAlignment.start,
                           ),
-                          const SizedBox(
-                            width: 25,
+                          SizedBox(
+                            width: 25.w,
                           ),
                           const TitleWidget(
                             title: 'Passengers',
@@ -390,7 +390,7 @@ class _CheckkoutFlight1WidgetState extends State<CheckkoutFlight1Widget> {
                       ),
                       if (isFlight = addCardList[index]['isFlight']) ...[
                         Container(
-                          width: 290.w,
+                          width: 295.w,
                           padding: const EdgeInsets.all(5),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(30),
@@ -476,26 +476,6 @@ class _CheckkoutFlight1WidgetState extends State<CheckkoutFlight1Widget> {
                 );
               },
             ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          Buttons(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            text: 'Payment',
-            isText: true,
-            fontSizeText: 16,
-            fontWeightText: FontWeight.w500,
-            borderColor: AppColos.linear,
-            colorText: AppColos.white,
-            borderRadius: 50,
-            height: 50,
-            width: 325,
-          ),
-          const SizedBox(
-            height: 12,
           ),
         ],
       ),

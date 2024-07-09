@@ -88,8 +88,10 @@ List<Map<String, dynamic>> listcartGridView = [
     'title': 'Korea',
     'image': ImageHome.korea,
     'favoriteTop': 10.0.h,
+    'height': 200.h,
   },
   {
+    'height': 125.h,
     'isFavorite': false,
     'favoriteRight': 0.0,
     'favoriteLeft': 90.0,
@@ -100,6 +102,7 @@ List<Map<String, dynamic>> listcartGridView = [
     'favoriteTop': 10.0.h,
   },
   {
+    'height': 125.h,
     'isFavorite': false,
     'favoriteRight': 0.0,
     'favoriteLeft': 90.0,
@@ -110,6 +113,7 @@ List<Map<String, dynamic>> listcartGridView = [
     'favoriteTop': 10.0.h,
   },
   {
+    'height': 200.h,
     'isFavorite': false,
     'favoriteRight': 0.0,
     'favoriteLeft': 100.0,
@@ -200,36 +204,39 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     left: 25,
                     top: 20,
                   ),
-                  child: Column(
-                    children: [
-                      CartIconWidget(cartIcon: cartIcon),
-                      SizedBox(
-                        height: 20.h,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const TextWidget(
-                            text: 'Popular Destinations',
-                            fontSize: 18,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.black,
-                          ),
-                          TextButton(
-                            onPressed: () {},
-                            child: const TextWidget(
-                              text: 'See All',
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                              color: Color(0xff6155CC),
-                            ),
-                          ),
-                        ],
-                      ),
-                      ListCartGridViewWidget(
-                        listcartGridView: listcartGridView,
-                      ),
-                    ],
+                  child: SizedBox(
+                    width: 411.w,
+                    child: Column(
+                      children: [
+                        CartIconWidget(cartIcon: cartIcon),
+                        SizedBox(
+                          height: 20.h,
+                        ),
+                        // Row(
+                        //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        //   children: [
+                        //     const TextWidget(
+                        //       text: 'Popular Destinations',
+                        //       fontSize: 18,
+                        //       fontWeight: FontWeight.w700,
+                        //       color: Colors.black,
+                        //     ),
+                        //     TextButton(
+                        //       onPressed: () {},
+                        //       child: const TextWidget(
+                        //         text: 'See All',
+                        //         fontSize: 18,
+                        //         fontWeight: FontWeight.w500,
+                        //         color: Color(0xff6155CC),
+                        //       ),
+                        //     ),
+                        //   ],
+                        // ),
+                        // ListCartGridViewWidget(
+                        //   listcartGridView: listcartGridView,
+                        // ),
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -257,6 +264,7 @@ class ListCartGridViewWidget extends StatefulWidget {
 
 class _ListCartGridViewWidgetState extends State<ListCartGridViewWidget> {
   final Set<String> favoriteItems = {};
+
   final List<String> items = [
     'Item 1',
     'Item 3',
@@ -265,103 +273,82 @@ class _ListCartGridViewWidgetState extends State<ListCartGridViewWidget> {
   ];
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 411.w,
-      height: MediaQuery.sizeOf(context).height * 0.50,
-      child: GridView.builder(
-        itemCount: widget.listcartGridView.length,
-        itemBuilder: (context, index) {
-          final item = items[index];
-          final isFavourite = favoriteItems.contains(item);
-          return Stack(
+    final item = items[index];
+    final isFavourite = favoriteItems.contains(item);
+    return Stack(
+      children: [
+        SizedBox(
+          width: 150.w,
+          child: Image.asset(
+            widget.listcartGridView[index]['image'],
+            fit: BoxFit.fill,
+          ),
+        ),
+        Positioned(
+          left: widget.listcartGridView[index]['favoriteLeft'],
+          top: widget.listcartGridView[index]['favoriteTop'],
+          right: widget.listcartGridView[index]['favoriteRight'],
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                if (isFavourite) {
+                  favoriteItems.remove(item);
+                } else {
+                  favoriteItems.add(item);
+                }
+              });
+            },
+            child: Icon(
+              Icons.favorite,
+              size: 20.sp,
+              color: isFavourite ? const Color(0xffF77777) : AppColos.white,
+            ),
+          ),
+        ),
+        Positioned(
+          left: widget.listcartGridView[index]['leftTitle'],
+          top: widget.listcartGridView[index]['topTitle'],
+          child: Column(
             children: [
-              SizedBox(
-                width: 150,
-                child: Image.asset(widget.listcartGridView[index]['image']),
+              TextWidget(
+                text: widget.listcartGridView[index]['title'],
+                fontSize: 14,
+                fontWeight: FontWeight.w500,
               ),
-              Positioned(
-                left: widget.listcartGridView[index]['favoriteLeft'],
-                top: widget.listcartGridView[index]['favoriteTop'],
-                right: widget.listcartGridView[index]['favoriteRight'],
-                child: GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      if (isFavourite) {
-                        favoriteItems.remove(item);
-                      } else {
-                        favoriteItems.add(item);
-                      }
-                    });
-                  },
-                  child: Icon(
-                    Icons.favorite,
-                    size: 20.sp,
-                    color:
-                        isFavourite ? const Color(0xffF77777) : AppColos.white,
-                  ),
-                ),
+              const SizedBox(
+                height: 10,
               ),
-              Positioned(
-                left: widget.listcartGridView[index]['leftTitle'],
-                top: widget.listcartGridView[index]['topTitle'],
-                child: Column(
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 4),
+                width: 50,
+                height: 24,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: Colors.white38),
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    Icon(
+                      Icons.star,
+                      size: 16,
+                      color: Color(0xffFFC107),
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
                     TextWidget(
-                      text: widget.listcartGridView[index]['title'],
-                      fontSize: 14,
-                      fontWeight: FontWeight.w500,
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 7, vertical: 4),
-                      width: 50,
-                      height: 24,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5),
-                          color: Colors.white38),
-                      child: const Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.star,
-                            size: 16,
-                            color: Color(0xffFFC107),
-                          ),
-                          SizedBox(
-                            width: 5,
-                          ),
-                          TextWidget(
-                            text: '4.5',
-                            fontSize: 10,
-                            fontWeight: FontWeight.w400,
-                            color: Colors.black,
-                          ),
-                        ],
-                      ),
+                      text: '4.5',
+                      fontSize: 10,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.black,
                     ),
                   ],
                 ),
               ),
             ],
-          );
-        },
-        physics: const NeverScrollableScrollPhysics(),
-        gridDelegate: SliverWovenGridDelegate.count(
-          crossAxisCount: 2,
-          crossAxisSpacing: 10.w,
-          pattern: [
-            const WovenGridTile(
-              5 / 6,
-              crossAxisRatio: 0.9,
-              alignment: AlignmentDirectional.centerEnd,
-            ),
-            const WovenGridTile(1),
-          ],
+          ),
         ),
-      ),
+      ],
     );
   }
 }
@@ -377,8 +364,7 @@ class CartIconWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 400,
-      height: 123,
+      width: 400.w,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
@@ -387,22 +373,22 @@ class CartIconWidget extends StatelessWidget {
               GestureDetector(
                 onTap: cartIcon[index]['onTap'],
                 child: Container(
-                  width: 112,
-                  height: 90,
+                  width: 112.w,
+                  height: 90.h,
                   decoration: BoxDecoration(
                     color: cartIcon[index]['color'],
-                    borderRadius: BorderRadius.circular(18),
+                    borderRadius: BorderRadius.circular(18.r),
                   ),
                   child: Image.asset(cartIcon[index]['image']),
                 ),
               ),
-              const SizedBox(
-                height: 13,
+              SizedBox(
+                height: 13.h,
               ),
               TextWidget(
                 text: cartIcon[index]['text'],
                 color: Colors.black,
-                fontSize: 16,
+                fontSize: 16.sp,
                 fontWeight: FontWeight.w500,
               ),
             ],
