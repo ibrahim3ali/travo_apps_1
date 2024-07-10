@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'view/screen/review_hotel/review_hotel.dart';
+import 'core/app_routers/go_routers.dart';
+import 'view/screen/home/home.dart';
 
 void main() {
   runApp(
@@ -17,23 +18,6 @@ void main() {
   );
 }
 
-// class MyApp extends StatelessWidget {
-//   const MyApp({super.key});
-
-//   @override
-//   Widget build(BuildContext context) => ScreenUtilInit(
-//         designSize: const Size(411, 812),
-//         minTextAdapt: true,
-//         splitScreenMode: true,
-//         builder: (context, child) => MaterialApp.router(
-//           debugShowCheckedModeBanner: false,
-//           theme: ThemeData(
-//             fontFamily: GoogleFonts.rubik().fontFamily,
-//           ),
-//           routerConfig: allScreens,
-//         ),
-//       );
-// }
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -42,12 +26,29 @@ class MyApp extends StatelessWidget {
         designSize: const Size(411, 812),
         minTextAdapt: true,
         splitScreenMode: true,
-        builder: (context, child) => MaterialApp(
+        builder: (context, child) => MaterialApp.router(
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             fontFamily: GoogleFonts.rubik().fontFamily,
           ),
-          home: const ReviewHotel(),
+          routerConfig: allScreens,
         ),
       );
 }
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) => ScreenUtilInit(
+//         designSize: const Size(411, 812),
+//         minTextAdapt: true,
+//         splitScreenMode: true,
+//         builder: (context, child) => MaterialApp(
+//           debugShowCheckedModeBanner: false,
+//           theme: ThemeData(
+//             fontFamily: GoogleFonts.rubik().fontFamily,
+//           ),
+//           home: const Home(),
+//         ),
+//       );
+// }

@@ -80,7 +80,7 @@ class _ReviewHotelState extends State<ReviewHotel> {
                         width: 411.w,
                         height: MediaQuery.sizeOf(context).height * 0.91,
                         child: ListView.separated(
-                          physics: NeverScrollableScrollPhysics(),
+                          physics: const NeverScrollableScrollPhysics(),
                           itemBuilder: (context, index) {
                             return Container(
                               width: 411.w,
