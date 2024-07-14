@@ -4,8 +4,8 @@ import 'package:travo_apps_1/core/constants/app_colos.dart';
 import 'package:travo_apps_1/core/constants/assets.dart';
 import 'package:travo_apps_1/view/dtomic/text_widget/text_widget.dart';
 
-class ImageCardThree extends StatelessWidget {
-  const ImageCardThree({
+class ImageCardAppBarThree extends StatelessWidget {
+  const ImageCardAppBarThree({
     super.key,
     // this.topIcon = 60,
     this.leftIconLeft = 25,
@@ -19,8 +19,8 @@ class ImageCardThree extends StatelessWidget {
     this.rightIconRight = 25,
     this.imageIcon = '',
     this.topTitle = 58,
-    this.lsftTitle = 141,
-    this.rightTitle = 135,
+    this.lsftTitle,
+    this.rightTitle,
     this.fontSizeTitle = 30,
     this.title = '',
     this.fontWeightTitle = FontWeight.w500,
@@ -78,7 +78,7 @@ class ImageCardThree extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: 60,
+          top: 50,
           left: leftIconLeft,
           child: InkWell(
             onTap: onTapIcon,

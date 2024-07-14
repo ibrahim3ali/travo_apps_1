@@ -5,7 +5,7 @@ import 'package:travo_apps_1/view/widget/result_hotel_widget/cart_reviews_widget
 
 import '../../../../core/constants/assets.dart';
 import '../../../core/app_routers/routes_name.dart';
-import '../../dtomic/image_card/image_card_three.dart';
+import '../../dtomic/image_card/image_card_app_bar_three.dart';
 import '../../widget/result_hotel_widget/filter_hotel_draggable_scrollable_sheet_widget/filter_hotel_draggable_scrollable_sheet_widget.dart';
 
 class ResultHotel extends StatefulWidget {
@@ -69,7 +69,7 @@ class _ResultHotelState extends State<ResultHotel> {
         child: Stack(
           clipBehavior: Clip.none,
           children: [
-            ImageCardThree(
+            ImageCardAppBarThree(
               isColumn: false,
               onTapIcon: () {
                 context.pop();
@@ -83,8 +83,8 @@ class _ResultHotelState extends State<ResultHotel> {
                 );
               },
               title: 'Hotels',
-              lsftTitle: 161.w,
-              rightTitle: 120.w,
+              lsftTitle: 130.w,
+              // rightTitle: 120.w,
               imageIcon: ImageResultHotel.solid,
               // cartReviews: cartReviews,
             ),

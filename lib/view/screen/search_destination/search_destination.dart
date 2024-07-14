@@ -8,7 +8,7 @@ import 'package:travo_apps_1/view/dtomic/text_widget/text_widget.dart';
 import '../../../../core/app_routers/routes_name.dart';
 import '../../dtomic/button/buttons.dart';
 import '../../dtomic/form/custom_text_form_field.dart';
-import '../../dtomic/image_card/image_card_one.dart';
+import '../../dtomic/image_card/image_card_app_bar_one.dart';
 
 class SearchDestination extends StatefulWidget {
   const SearchDestination({super.key});
@@ -27,11 +27,10 @@ class _SearchDestinationState extends State<SearchDestination> {
     return Scaffold(
       body: Column(
         children: [
-          ImageCardOne(
+          ImageCardAppBarOne(
             onTapIcon: () {
               context.pop();
             },
-            fontSizeTitle: 30.sp,
             fontWeightTitle: FontWeight.w500,
             title: 'Search ',
             distance: 0.h,

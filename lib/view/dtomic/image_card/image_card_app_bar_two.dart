@@ -6,8 +6,10 @@ import 'package:travo_apps_1/core/constants/assets.dart';
 import 'package:travo_apps_1/view/dtomic/form/custom_text_form_field.dart';
 import 'package:travo_apps_1/view/dtomic/title_widget/title_widget.dart';
 
-class ImageCardTwo extends StatelessWidget {
-  const ImageCardTwo({
+import '../../../core/constants/image_app_bar.dart';
+
+class ImageCardAppBarTwo extends StatelessWidget {
+  const ImageCardAppBarTwo({
     super.key,
     required this.formfield,
     required this.searchController,
@@ -17,13 +19,12 @@ class ImageCardTwo extends StatelessWidget {
     this.title = '',
     this.subTitle = '',
     this.colorText = AppColos.white,
-    this.fontSizeTitle,
     this.fontSizeSubTitle,
     this.fontWeightTitle,
     this.fontWeightSubTitle,
     this.distance,
     this.widthRowOne,
-    this.widthRowTwo,
+    // this.widthRowTwo,
     this.onPressedIcon,
     this.icon,
     this.iconColor = AppColos.white,
@@ -32,7 +33,7 @@ class ImageCardTwo extends StatelessWidget {
     this.radiusImage = 10,
     required this.image,
     this.fitImage = BoxFit.contain,
-    required this.heightColumn,
+    // required this.heightColumn,
     this.hintTextForm,
     this.colorForm = Colors.black,
     this.prefixIconForm,
@@ -45,11 +46,8 @@ class ImageCardTwo extends StatelessWidget {
   final EdgeInsetsGeometry paddingList, paddingForm;
   final String title, subTitle;
   final Color colorText, iconColor;
-  final double? fontSizeTitle,
-      fontSizeSubTitle,
-      distance,
-      widthRowOne,
-      widthRowTwo;
+  final double?  fontSizeSubTitle, distance, widthRowOne;
+  // widthRowTwo;
   final FontWeight? fontWeightTitle, fontWeightSubTitle;
   final void Function()? onPressedIcon;
   final IconData? icon;
@@ -58,7 +56,7 @@ class ImageCardTwo extends StatelessWidget {
   final double radiusImage;
   final String image;
   final BoxFit? fitImage;
-  final double heightColumn;
+  // final double heightColumn;
   final String? hintTextForm;
   final Color? colorForm;
   final Widget? prefixIconForm;
@@ -79,11 +77,13 @@ class ImageCardTwo extends StatelessWidget {
         Padding(
           padding: paddingList,
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TitleWidget(
                 title: title,
                 colorTitle: colorText,
-                fontSizeTitle: fontSizeTitle,
+                fontSizeTitle: ImageAppBar.fontsizeTitle,
                 fontWeightTitle: fontWeightTitle,
                 distance: distance,
                 subTitle: subTitle,
@@ -101,9 +101,9 @@ class ImageCardTwo extends StatelessWidget {
                   color: iconColor,
                 ),
               ),
-              SizedBox(
-                width: widthRowTwo,
-              ),
+              // SizedBox(
+              //   width: widthRowTwo,
+              // ),
               Container(
                 width: widthImage,
                 height: widthImage,
@@ -119,9 +119,9 @@ class ImageCardTwo extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(
-          height: heightColumn,
-        ),
+        // SizedBox(
+        //   height: heightColumn,
+        // ),
         Form(
           key: formfield,
           child: Padding(

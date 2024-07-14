@@ -6,7 +6,7 @@ import 'package:travo_apps_1/view/dtomic/button/buttons.dart';
 import 'package:travo_apps_1/view/dtomic/text_widget/text_widget.dart';
 
 import '../../../core/constants/assets.dart';
-import '../../dtomic/image_card/image_card_one.dart';
+import '../../dtomic/image_card/image_card_app_bar_one.dart';
 
 class GuestAndRoom extends StatefulWidget {
   const GuestAndRoom({super.key});
@@ -34,11 +34,10 @@ class _GuestAndRoomState extends State<GuestAndRoom> {
     return Scaffold(
       body: Column(
         children: [
-          ImageCardOne(
+          ImageCardAppBarOne(
             onTapIcon: () {
               context.pop();
             },
-            fontSizeTitle: 30,
             fontWeightTitle: FontWeight.w500,
             title: 'Add ',
             distance: 0,

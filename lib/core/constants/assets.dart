@@ -118,7 +118,7 @@ class ImagefacilitiesHotel {
   static String digitalTV = '$facilitiesHotelScreen/digital_tv.png';
   static String currencyExchange =
       '$facilitiesHotelScreen/currency_exchange.png';
-  static String carRental = '$facilitiesHotelScreen/car_rental.png';
+  static String carRental = '$facilitiesHotelScreen/car-rental.png';
   static String hourFrontDesk = '$facilitiesHotelScreen/24_hour_front_desk.png';
 }
 

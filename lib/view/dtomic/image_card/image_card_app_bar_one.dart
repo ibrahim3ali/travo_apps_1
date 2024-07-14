@@ -4,10 +4,11 @@ import 'package:travo_apps_1/view/dtomic/text_widget/text_widget.dart';
 
 import '../../../core/constants/app_colos.dart';
 import '../../../core/constants/assets.dart';
+import '../../../core/constants/image_app_bar.dart';
 import '../title_widget/title_widget.dart';
 
-class ImageCardOne extends StatelessWidget {
-  const ImageCardOne({
+class ImageCardAppBarOne extends StatelessWidget {
+  const ImageCardAppBarOne({
     super.key,
     this.iconLeft = 25,
     this.onTapIcon,
@@ -18,7 +19,7 @@ class ImageCardOne extends StatelessWidget {
     // this.textLeft = 138,
     // this.textRight = 137,
     // this.textTop = 113,
-    this.fontSizeTitle = 30,
+    // this.fontSizeTitle = 30,
     this.distance = 20,
     this.fontSizeSubTitle = 12,
     this.colorTitle = AppColos.white,
@@ -36,7 +37,7 @@ class ImageCardOne extends StatelessWidget {
       // textLeft,
       // textRight,
       // textTop,
-      fontSizeTitle,
+      // fontSizeTitle,
       distance,
       fontSizeSubTitle;
   final double? iconLeft;
@@ -91,7 +92,7 @@ class ImageCardOne extends StatelessWidget {
               ? TitleWidget(
                   title: title,
                   colorTitle: colorTitle,
-                  fontSizeTitle: fontSizeTitle,
+                  fontSizeTitle: ImageAppBar.fontsizeTitle,
                   fontWeightTitle: fontWeightTitle,
                   distance: distance,
                   subTitle: subTitle,
@@ -106,7 +107,7 @@ class ImageCardOne extends StatelessWidget {
                     child: TextWidget(
                       text: title,
                       color: colorTitle,
-                      fontSize: fontSizeTitle,
+                      fontSize: ImageAppBar.fontsizeTitle,
                       fontWeight: fontWeightTitle,
                     ),
                   ),

@@ -8,7 +8,7 @@ import 'package:travo_apps_1/view/dtomic/title_widget/title_widget.dart';
 import '../../../core/app_routers/routes_name.dart';
 import '../../../core/constants/assets.dart';
 import '../../dtomic/button/buttons.dart';
-import '../../dtomic/image_card/image_card_three.dart';
+import '../../dtomic/image_card/image_card_app_bar_three.dart';
 
 class SelectRoom extends StatefulWidget {
   const SelectRoom({super.key});
@@ -74,7 +74,7 @@ class _SelectRoomState extends State<SelectRoom> {
           child: Stack(
             clipBehavior: Clip.none,
             children: [
-              ImageCardThree(
+              ImageCardAppBarThree(
                 isColumn: false,
                 isIconTwo: false,
                 onTapIcon: () {
@@ -83,8 +83,7 @@ class _SelectRoomState extends State<SelectRoom> {
                 title: 'Select Room',
                 fontSizeTitle: 30.sp,
                 fontWeightTitle: FontWeight.bold,
-                topTitle: 58.h,
-                rightTitle: 85.w,
+                topTitle: 70.h,
                 lsftTitle: 100.w,
               ),
               Positioned.fill(
@@ -157,7 +156,8 @@ class _SelectRoomState extends State<SelectRoom> {
                                 scrollDirection: Axis.horizontal,
                                 physics: const NeverScrollableScrollPhysics(),
                                 separatorBuilder: (context, index) => SizedBox(
-                                  width: 45.w,
+                                  width:
+                                      MediaQuery.sizeOf(context).width * 0.08.w,
                                 ),
                                 itemCount: productDetailsCardIcon.length,
                                 itemBuilder: (context, index) {

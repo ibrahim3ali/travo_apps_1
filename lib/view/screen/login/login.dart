@@ -5,7 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../../../core/app_routers/routes_name.dart';
 import '../../../core/constants/app_colos.dart';
 import '../../dtomic/button/buttons.dart';
-import '../../dtomic/image_card/image_card_one.dart';
+import '../../dtomic/image_card/image_card_app_bar_one.dart';
 import '../../dtomic/text_widget/text_widget.dart';
 import '../../widget/login_widget/check_box_widget/check_box_widget.dart';
 import '../../widget/login_widget/form_email_widget/form_email_widget.dart';
@@ -38,12 +38,11 @@ class _LoginState extends State<Login> {
             key: formfield,
             child: Column(
               children: [
-                ImageCardOne(
+                ImageCardAppBarOne(
                   onTapIcon: () {
                     context.goNamed(RoutesName.login);
                   },
                   fontSizeSubTitle: 14.sp,
-                  fontSizeTitle: 30.sp,
                   distance: 15.h,
                   title: 'Login',
                   subTitle: 'Hi, Welcome back!',

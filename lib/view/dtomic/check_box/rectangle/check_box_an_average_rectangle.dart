@@ -9,7 +9,7 @@ class CheckBoxAnAverageRectangle extends StatelessWidget {
     super.key,
     this.width,
     this.color,
-    this.radius = 9,
+    this.radius = 5,
     this.borderColor = Colors.transparent,
     this.onTap,
     this.isCheck = true,

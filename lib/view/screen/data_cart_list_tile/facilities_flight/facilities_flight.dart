@@ -6,7 +6,7 @@ import 'package:travo_apps_1/view/dtomic/button/buttons.dart';
 
 import '../../../../core/constants/assets.dart';
 import '../../../dtomic/check_box/rectangle/check_box_an_average_rectangle.dart';
-import '../../../dtomic/image_card/image_card_one.dart';
+import '../../../dtomic/image_card/image_card_app_bar_one.dart';
 import '../../../dtomic/text_widget/text_widget.dart';
 
 class FacilitiesFlight extends StatefulWidget {
@@ -47,7 +47,7 @@ class _FacilitiesFlightState extends State<FacilitiesFlight> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ImageCardOne(
+            ImageCardAppBarOne(
               onTapIcon: () {
                 context.pop();
               },

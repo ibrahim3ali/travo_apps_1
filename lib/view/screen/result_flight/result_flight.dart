@@ -8,7 +8,7 @@ import 'package:travo_apps_1/view/dtomic/title_widget/title_widget.dart';
 import '../../../core/app_routers/routes_name.dart';
 import '../../../core/constants/assets.dart';
 import '../../dtomic/button/buttons.dart';
-import '../../dtomic/image_card/image_card_three.dart';
+import '../../dtomic/image_card/image_card_app_bar_three.dart';
 
 class ResultFlight extends StatefulWidget {
   const ResultFlight({super.key});
@@ -64,7 +64,7 @@ class _ResultFlightState extends State<ResultFlight> {
         height: height,
         child: Stack(
           children: [
-            ImageCardThree(
+            ImageCardAppBarThree(
               isColumn: true,
               isIconTwo: true,
               onTapIcon: () {

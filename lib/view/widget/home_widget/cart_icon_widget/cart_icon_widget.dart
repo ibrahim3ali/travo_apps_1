@@ -23,7 +23,7 @@ class CartIconWidget extends StatelessWidget {
               GestureDetector(
                 onTap: cartIcon[index]['onTap'],
                 child: Container(
-                  width: 112.w,
+                  width: MediaQuery.sizeOf(context).width * 0.26.w,
                   height: 90.h,
                   decoration: BoxDecoration(
                     color: cartIcon[index]['color'],
@@ -38,7 +38,7 @@ class CartIconWidget extends StatelessWidget {
               TextWidget(
                 text: cartIcon[index]['text'],
                 color: Colors.black,
-                fontSize: 16.sp,
+                fontSize: 15.sp,
                 fontWeight: FontWeight.w500,
               ),
             ],

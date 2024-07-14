@@ -5,7 +5,7 @@ import 'package:travo_apps_1/view/dtomic/button/buttons.dart';
 
 import '../../../core/app_routers/routes_name.dart';
 import '../../../core/constants/app_colos.dart';
-import '../../dtomic/image_card/image_card_one.dart';
+import '../../dtomic/image_card/image_card_app_bar_one.dart';
 import '../../widget/login_widget/form_email_widget/form_email_widget.dart';
 import '../../widget/login_widget/form_password_widget/form_password_widget.dart';
 import '../../widget/login_widget/o_r_widget/o_r_widget.dart';
@@ -39,12 +39,11 @@ class _SignUpState extends State<SignUp> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ImageCardOne(
+            ImageCardAppBarOne(
               onTapIcon: () {
                 context.pop();
               },
               fontSizeSubTitle: 14.sp,
-              fontSizeTitle: 30.sp,
               distance: 15.h,
               title: 'Sign Up',
               subTitle: 'Let’s create your account!',

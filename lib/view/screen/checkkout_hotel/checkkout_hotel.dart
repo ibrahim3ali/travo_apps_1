@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:travo_apps_1/core/constants/app_colos.dart';
-import 'package:travo_apps_1/view/dtomic/image_card/image_card_three.dart';
+import 'package:travo_apps_1/view/dtomic/image_card/image_card_app_bar_three.dart';
 
 import '../../../core/app_routers/routes_name.dart';
 import '../../dtomic/button/buttons.dart';
@@ -75,13 +75,12 @@ class _CheckkoutHotelState extends State<CheckkoutHotel> {
             Stack(
               clipBehavior: Clip.none,
               children: [
-                ImageCardThree(
+                ImageCardAppBarThree(
                   isColumn: false,
                   onTapIcon: () {
                     context.pop();
                   },
                   topTitle: 58.h,
-                  rightTitle: 100,
                   lsftTitle: 130,
                   isIconTwo: false,
                   title: 'Checkout',
@@ -90,11 +89,11 @@ class _CheckkoutHotelState extends State<CheckkoutHotel> {
                   colorTitle: AppColos.white,
                 ),
                 Positioned(
-                  left: 25,
-                  right: 25,
+                  left: 5,
+                  right: 5,
                   top: 120,
                   child: SizedBox(
-                    width: 411.w,
+                    // width: 411.w,
                     height: 24.h,
                     child: Row(
                       children: List.generate(
@@ -108,11 +107,11 @@ class _CheckkoutHotelState extends State<CheckkoutHotel> {
                                 isActive: index == _index,
                               ),
                               SizedBox(
-                                width: 10.w,
+                                width: 5.w,
                               ),
                               if (index < (cardScreen.length - 1))
-                                const SizedBox(
-                                  width: 16,
+                                SizedBox(
+                                  width: 15.w,
                                   height: 1,
                                   child: Divider(
                                     color: AppColos.white,

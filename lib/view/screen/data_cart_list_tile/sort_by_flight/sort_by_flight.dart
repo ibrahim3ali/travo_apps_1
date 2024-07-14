@@ -6,7 +6,7 @@ import 'package:travo_apps_1/core/constants/app_colos.dart';
 import 'package:travo_apps_1/view/dtomic/button/buttons.dart';
 
 import '../../../dtomic/check_box/circle/check_box_an_average_circle.dart';
-import '../../../dtomic/image_card/image_card_one.dart';
+import '../../../dtomic/image_card/image_card_app_bar_one.dart';
 import '../../../dtomic/text_widget/text_widget.dart';
 
 class SortByflight extends StatefulWidget {
@@ -56,7 +56,7 @@ class _SortByflightState extends State<SortByflight> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ImageCardOne(
+            ImageCardAppBarOne(
               onTapIcon: () {
                 Navigator.pop(context);
               },

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:travo_apps_1/core/constants/app_colos.dart';
-import 'package:travo_apps_1/view/dtomic/image_card/image_card_three.dart';
+import 'package:travo_apps_1/view/dtomic/image_card/image_card_app_bar_three.dart';
 
 import '../../../core/app_routers/routes_name.dart';
 import '../../dtomic/button/buttons.dart';
@@ -75,7 +75,7 @@ class _CheckkoutFlightState extends State<CheckkoutFlight> {
           Stack(
             clipBehavior: Clip.none,
             children: [
-              ImageCardThree(
+              ImageCardAppBarThree(
                 isColumn: false,
                 onTapIcon: () {
                   context.pop();

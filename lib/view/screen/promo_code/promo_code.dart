@@ -6,7 +6,7 @@ import 'package:travo_apps_1/view/dtomic/text_widget/text_widget.dart';
 import '../../../core/app_routers/routes_name.dart';
 import '../../../core/constants/app_colos.dart';
 import '../../dtomic/button/buttons.dart';
-import '../../dtomic/image_card/image_card_one.dart';
+import '../../dtomic/image_card/image_card_app_bar_one.dart';
 
 class PromoCode extends StatefulWidget {
   const PromoCode({super.key});
@@ -21,11 +21,10 @@ class _PromoCodeState extends State<PromoCode> {
     return Scaffold(
       body: Column(
         children: [
-          ImageCardOne(
+          ImageCardAppBarOne(
             onTapIcon: () {
               context.pop();
             },
-            fontSizeTitle: 30.sp,
             fontWeightTitle: FontWeight.bold,
             title: 'Promo Code',
             distance: 0,

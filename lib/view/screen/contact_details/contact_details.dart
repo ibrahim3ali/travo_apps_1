@@ -5,7 +5,7 @@ import 'package:travo_apps_1/view/dtomic/text_widget/text_widget.dart';
 
 import '../../../core/constants/app_colos.dart';
 import '../../dtomic/button/buttons.dart';
-import '../../dtomic/image_card/image_card_one.dart';
+import '../../dtomic/image_card/image_card_app_bar_one.dart';
 import '../../widget/login_widget/form_email_widget/form_email_widget.dart';
 import '../../widget/sign_up_widget/form_name_widget/form_name_widget.dart';
 import '../../widget/sign_up_widget/form_phone_number_widget/form_phone_number_widget.dart';
@@ -28,11 +28,10 @@ class _ContactDetailsState extends State<ContactDetails> {
     return Scaffold(
       body: Column(
         children: [
-          ImageCardOne(
+          ImageCardAppBarOne(
             onTapIcon: () {
               context.pop();
             },
-            fontSizeTitle: 30.sp,
             fontWeightTitle: FontWeight.bold,
             title: 'Contact  ',
             distance: 0,

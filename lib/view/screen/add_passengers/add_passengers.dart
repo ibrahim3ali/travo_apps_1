@@ -8,7 +8,7 @@ import 'package:travo_apps_1/view/dtomic/text_widget/text_widget.dart';
 import 'package:travo_apps_1/view/dtomic/title_widget/title_widget.dart';
 
 import '../../../core/constants/assets.dart';
-import '../../dtomic/image_card/image_card_one.dart';
+import '../../dtomic/image_card/image_card_app_bar_one.dart';
 
 class AddPassengers extends StatefulWidget {
   const AddPassengers({super.key});
@@ -45,11 +45,10 @@ class _AddPassengersState extends State<AddPassengers> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ImageCardOne(
+            ImageCardAppBarOne(
               onTapIcon: () {
                 Navigator.pop(context);
               },
-              fontSizeTitle: 30.sp,
               fontWeightTitle: FontWeight.w500,
               title: 'Add ',
               distance: 0,

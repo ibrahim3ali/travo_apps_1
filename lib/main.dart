@@ -4,12 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'core/app_routers/go_routers.dart';
-import 'view/screen/home/home.dart';
 
 void main() {
   runApp(
     DevicePreview(
-      enabled: false,
+      enabled: true,
       tools: const [...DevicePreview.defaultTools],
       builder: (context) {
         return const MyApp();

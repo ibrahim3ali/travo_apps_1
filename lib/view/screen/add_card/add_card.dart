@@ -8,7 +8,7 @@ import '../../../core/constants/assets.dart';
 import '../../../core/constants/orders_validator.dart';
 import '../../dtomic/button/buttons.dart';
 import '../../dtomic/form/custom_text_form_field.dart';
-import '../../dtomic/image_card/image_card_one.dart';
+import '../../dtomic/image_card/image_card_app_bar_one.dart';
 import '../../widget/sign_up_widget/form_dropdown_country_widget/form_dropdown_country_widget.dart';
 import '../../widget/sign_up_widget/form_name_widget/form_name_widget.dart';
 
@@ -34,11 +34,10 @@ class _AddCardState extends State<AddCard> {
     return Scaffold(
       body: Column(
         children: [
-          ImageCardOne(
+          ImageCardAppBarOne(
             onTapIcon: () {
               context.pop();
             },
-            fontSizeTitle: 30.sp,
             fontWeightTitle: FontWeight.w500,
             title: 'Add Card',
             distance: 0,

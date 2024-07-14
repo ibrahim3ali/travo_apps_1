@@ -8,7 +8,7 @@ import 'package:travo_apps_1/view/dtomic/text_widget/text_widget.dart';
 import 'package:travo_apps_1/view/dtomic/title_widget/title_widget.dart';
 
 import '../../../../core/constants/assets.dart';
-import '../../dtomic/image_card/image_card_three.dart';
+import '../../dtomic/image_card/image_card_app_bar_three.dart';
 import '../../widget/review_hotel_widget/filter_review_draggable_scrollable_sheet_widget.dart';
 
 class ReviewHotel extends StatefulWidget {
@@ -47,7 +47,7 @@ class _ReviewHotelState extends State<ReviewHotel> {
         child: Stack(
           clipBehavior: Clip.none,
           children: [
-            ImageCardThree(
+            ImageCardAppBarThree(
               isColumn: false,
               onTapIcon: () {
                 context.pop();

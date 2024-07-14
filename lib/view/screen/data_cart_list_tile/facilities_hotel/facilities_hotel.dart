@@ -6,7 +6,7 @@ import 'package:travo_apps_1/view/dtomic/button/buttons.dart';
 
 import '../../../../../core/constants/assets.dart';
 import '../../../dtomic/check_box/rectangle/check_box_an_average_rectangle.dart';
-import '../../../dtomic/image_card/image_card_one.dart';
+import '../../../dtomic/image_card/image_card_app_bar_one.dart';
 import '../../../dtomic/text_widget/text_widget.dart';
 
 class FacilitiesHotel extends StatefulWidget {
@@ -67,7 +67,7 @@ class _FacilitiesHotelState extends State<FacilitiesHotel> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ImageCardOne(
+            ImageCardAppBarOne(
               onTapIcon: () {
                 context.pop();
               },
@@ -101,7 +101,7 @@ class _FacilitiesHotelState extends State<FacilitiesHotel> {
                   ),
                   SizedBox(
                     width: 411.w,
-                    height: 375.h,
+                    height: MediaQuery.sizeOf(context).height * 0.75.h,
                     child: ListView.separated(
                       physics: const NeverScrollableScrollPhysics(),
                       itemBuilder: (context, index) => Row(

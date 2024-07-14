@@ -5,7 +5,7 @@ import 'package:travo_apps_1/core/constants/app_colos.dart';
 import 'package:travo_apps_1/view/dtomic/button/buttons.dart';
 
 import '../../../dtomic/check_box/rectangle/check_box_an_average_rectangle.dart';
-import '../../../dtomic/image_card/image_card_one.dart';
+import '../../../dtomic/image_card/image_card_app_bar_one.dart';
 import '../../../dtomic/text_widget/text_widget.dart';
 
 class PropertyType extends StatefulWidget {
@@ -58,7 +58,7 @@ class _PropertyTypeState extends State<PropertyType> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ImageCardOne(
+            ImageCardAppBarOne(
               onTapIcon: () {
                 context.pop();
               },
@@ -92,7 +92,7 @@ class _PropertyTypeState extends State<PropertyType> {
                   ),
                   SizedBox(
                     width: 411.w,
-                    height: 375.h,
+                    height: MediaQuery.sizeOf(context).height * 0.75.h,
                     child: ListView.separated(
                       physics: const NeverScrollableScrollPhysics(),
                       itemBuilder: (context, index) => Row(
@@ -116,7 +116,7 @@ class _PropertyTypeState extends State<PropertyType> {
                             width: 24,
                             color: AppColos.white,
                             borderColor: Colors.grey.shade400,
-                            radius: 9,
+                            radius: 5,
                           ),
                         ],
                       ),

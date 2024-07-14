@@ -5,7 +5,7 @@ import 'package:travo_apps_1/core/constants/app_colos.dart';
 
 import '../../../core/app_routers/routes_name.dart';
 import '../../dtomic/button/buttons.dart';
-import '../../dtomic/image_card/image_card_one.dart';
+import '../../dtomic/image_card/image_card_app_bar_one.dart';
 import '../../widget/booking_flight_widget/list_button_widget/list_button_widget.dart';
 import '../../widget/booking_flight_widget/one_way_widget/one_way_widget.dart';
 import '../../widget/booking_flight_widget/round_trip_widget/round_trip_widget.dart';
@@ -57,11 +57,10 @@ class _FlightAndHotelState extends State<FlightAndHotel> {
         child: Stack(
           clipBehavior: Clip.none,
           children: [
-            ImageCardOne(
+            ImageCardAppBarOne(
               onTapIcon: () {
                 context.goNamed(RoutesName.home);
               },
-              fontSizeTitle: 29.sp,
               fontWeightTitle: FontWeight.bold,
               distance: 0.h,
               title: 'Book Your',

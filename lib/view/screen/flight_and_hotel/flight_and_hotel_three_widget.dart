@@ -6,7 +6,7 @@ import 'package:travo_apps_1/core/app_routers/routes_name.dart';
 import '../../../core/constants/app_colos.dart';
 import '../../../core/constants/assets.dart';
 import '../../dtomic/button/buttons.dart';
-import '../../dtomic/image_card/image_card_one.dart';
+import '../../dtomic/image_card/image_card_app_bar_one.dart';
 import '../../dtomic/text_widget/text_widget.dart';
 import '../../widget/booking_hotel_widget/list_tile_card_widget/list_tile_card_widget.dart';
 
@@ -47,11 +47,10 @@ class _FlightAndHotelThreeWidgetState extends State<FlightAndHotelThreeWidget> {
     return Scaffold(
       body: Column(
         children: [
-          ImageCardOne(
+          ImageCardAppBarOne(
             onTapIcon: () {
               Navigator.pop(context);
             },
-            fontSizeTitle: 30.sp,
             fontWeightTitle: FontWeight.bold,
             distance: 0,
             title: 'Book Your',

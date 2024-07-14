@@ -8,7 +8,7 @@ import 'package:travo_apps_1/view/dtomic/title_widget/title_widget.dart';
 
 import '../../../core/constants/assets.dart';
 import '../../dtomic/button/buttons.dart';
-import '../../dtomic/image_card/image_card_one.dart';
+import '../../dtomic/image_card/image_card_app_bar_one.dart';
 
 class SelectSeat extends StatefulWidget {
   const SelectSeat({super.key});
@@ -63,7 +63,7 @@ class _SelectSeatState extends State<SelectSeat> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ImageCardOne(
+            ImageCardAppBarOne(
               onTapIcon: () {
                 context.pop();
               },
